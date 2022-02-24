@@ -16,7 +16,7 @@ const Alumnos = ({actualizar}) =>
         const urlParams = window.location.search;
         const params = new URLSearchParams(urlParams);
         getCurso(params.get("curso"));
-        if(curso != "")
+        if(curso !== "")
         {
             axios.get(url+"alumnos/" + curso).then(res =>{
                 getAlumnos(res.data.alumnos);

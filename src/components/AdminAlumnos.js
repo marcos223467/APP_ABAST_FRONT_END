@@ -8,6 +8,7 @@ const AdminAlumnos = () =>
     const [alumnos, getAlumnos] = useState([]);
     let fecha;
     let activo;
+    let cursos = "";
 
     useEffect(() =>{
         axios.get(url+"/alums").then(res =>{
@@ -29,6 +30,14 @@ const AdminAlumnos = () =>
             activo = "Si";
         else
             activo = "No";
+    }
+    function Cursos(curs)
+    {
+        cursos = "";
+        for(let i = 0; i < curs.length; i++)
+        {
+            cursos += curs[i] + "  ";
+        }
     }
     function Volver(event)
     {
@@ -57,6 +66,7 @@ const AdminAlumnos = () =>
                         {
                             CambiaFecha(alumno.fecha_nacimiento);
                             Activo(alumno.activo);
+                            Cursos(alumno.cursos);
                             return(
                                 <tr key={i}>
                                     <th scope="row">{i + 1}</th>
@@ -64,7 +74,7 @@ const AdminAlumnos = () =>
                                     <td>{alumno.apellidos}</td>
                                     <td>{fecha}</td>
                                     <td>{alumno.edad}</td>
-                                    <td>{alumno.cursos}</td>
+                                    <td>{cursos}</td>
                                     <td>{activo}</td>
                                     <td>
                                         <a href={'/editar_alumno?id=' + alumno._id}>

@@ -20,7 +20,7 @@ const CursoEdit = () =>
         const urlParams = window.location.search;
         const params = new URLSearchParams(urlParams);
         getId(params.get("id"));
-        if(id != 0)
+        if(id !== 0)
         {
             axios.get(url+"/get_curso/" + id).then(res =>{
                 getCurso(res.data.curso);
