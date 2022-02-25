@@ -88,6 +88,11 @@ const Alumno = ({id,alumnoData, actualizar}) =>
             document.getElementById("spinner"+id).style.display = "inline-block";
             await axios.post(url + 'save_asistencia', asistData);
 
+            await axios.get(url+"get_asistencia/"+ curso + "/" + alumnoData._id).then(res =>{
+                getAsistencia(res.data.asistencia);
+
+            });
+
         }
         else
         {
