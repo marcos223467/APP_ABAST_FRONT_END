@@ -16,6 +16,7 @@ import CursoEdit from './components/CursoEdit';
 import AlumnoEdit from './components/AlumnoEdit';
 import Administrar from './components/Administrar';
 import AdminAlumnos from './components/AdminAlumnos';
+import Info from './components/Info';
 const Router = () => {
     return (
 
@@ -36,6 +37,7 @@ const Router = () => {
                 <Route exact path="/editar_alumno" element={<AlumnoEdit />} />
                 <Route exact path="/admin" element={<Administrar />} />
                 <Route exact path="/admin_alums" element={<AdminAlumnos />} />
+                <Route exact path="/info" element={<Info/>} />
             </Routes>
             <Footer/>
         </BrowserRouter>

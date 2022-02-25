@@ -46,7 +46,20 @@ legend
     display:block;
     margin: 0 auto;
     background-color: #e4006a;
-    width: 15%;
+    width: auto;
     border-radius: 30px;
-    margin-bottom: 5%;
+    margin-bottom: 20%;
+}
+
+@media (max-width: 700px) {
+    form
+    {
+        width: auto;
+        
+    }
+
+    #logoSignIn
+    {
+        display:none;
+    }
 }

@@ -6,12 +6,6 @@ input
     width: 80% !important;
 }
 
-label
-{
-    display: inline-block;
-    margin-left: 25%;
-    color: black !important;
-}
 #psw
 {
     color: rgb(255, 255, 255) !important;
@@ -40,21 +34,4 @@ label
 {
     display: block;
     margin: 0 auto;
-}
-
-/*
-#formulario
-{
-    margin-bottom: 10%;
-}*/
-
-@media (max-width:720px)
-{
-
-    label
-    {
-        font-size: 12px;
-        color: black;
-    }
-
 }

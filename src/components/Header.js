@@ -23,14 +23,7 @@ const Header = () => {
                     <span className="fs-4"><img src={logo} width="200" alt="Logo"/></span>
                 </button>
                 <ul className="nav nav-pills" id="nav-menu">
-                    <li className="nav-item"><a href="#" className="nav-link text-link a">Sobre la App</a></li>
-                    <li className="nav-item dropdown">
-                        <a className="nav-link dropdown-toggle text-link a" href="#" id="dropdown03" data-bs-toggle="dropdown" aria-expanded="false">Nosotros</a>
-                        <ul className="dropdown-menu" aria-labelledby="dropdown03">
-                            <li><a className="dropdown-item a" href="https://www.abastanimacio.org/" target="_blank" >abastanimacio.org</a></li>
-                            <li><a className="dropdown-item a" href="https://formacion.abastanimacio.org/" target="_blank" >formación</a></li>
-                        </ul>
-                    </li>
+                    <li className="nav-item"><a href="/info" className="nav-link text-link a">Sobre la App</a></li>
                 </ul>
             </header>
         </div>

@@ -53,14 +53,3 @@ h1
     float: right;
     margin-bottom: 5%;
 }
-
-#volver-alumnos
-{
-    position: relative;
-    display:block;
-    margin: 0 auto;
-    background-color: #e4006a;
-    width: 15%;
-    border-radius: 30px;
-    margin-bottom: 20%;
-}

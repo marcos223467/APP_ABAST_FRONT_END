@@ -181,12 +181,26 @@ const Alumno = ({id,alumnoData, actualizar}) =>
                 <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3">
                     <div className="card" id="alumno">
                         <div className="card-body">
-                            <h3 className="card-title">{alumnoData.apellidos} {alumnoData.nombre}</h3>
-                            <p id="txt" className="card-text">Edad: {alumnoData.edad}</p>
-                            <p id = "txt" className="card-text">Fecha de nacimiento: {fecha.getDate() + "-" + (fecha.getMonth() + 1) + "-" + fecha.getFullYear()}</p>
-                            <div id="asis">
-                                <label>Asistencia</label>
-                                <button id={id} className="btn btn-secondary" onClick={CambiaEstado}>Pendiente</button>
+                            <div className="row">
+                                <h3 className="card-title">{alumnoData.apellidos} {alumnoData.nombre}</h3>
+                            </div>
+                            <div className="row">
+                                <p id="txt" className="card-text">Edad: {alumnoData.edad}</p>
+                            </div>
+                            <div className="row">
+                                <p id = "txt" className="card-text">Fecha de nacimiento: {fecha.getDate() + "-" + (fecha.getMonth() + 1) + "-" + fecha.getFullYear()}</p>
+                            </div>
+                        </div>
+                        <div className="row">
+                            <div className="container-fluid" id="container-alumno">
+                                <div className="row row-cols-1 row-cols-sm-1 row-cols-md-1 row-cols-lg-1">
+                                    <div className="col">
+                                        <button id={id} className="btn btn-secondary btn-asis" onClick={CambiaEstado}>Pendiente</button>
+                                    </div>
+                                    <div className="col">
+                                        <Spinner id={"spinner"+id} className="spinner" color="secondary" />
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>

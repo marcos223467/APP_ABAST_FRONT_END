@@ -70,7 +70,7 @@ const Alumnos = ({actualizar}) =>
                     </div>
                 </div>
                 <div>
-                    <button id="volver-alumnos" type="button" className="btn btn-dark" onClick={Volver}>Volver</button>
+                    <button id="volver" type="button" className="btn btn-dark" onClick={Volver}>Volver</button>
                 </div>
             </div>
         )

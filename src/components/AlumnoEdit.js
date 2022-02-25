@@ -33,7 +33,7 @@ const AlumnoEdit = () =>
             fecha = fecha.replace(fecha_extra, "");
             document.getElementById("nombre").value = alumno[0].nombre;
             document.getElementById("apellidos").value = alumno[0].apellidos;
-            document.getElementById("fecha").value = alumno[0].fecha;
+            document.getElementById("fecha").value = fecha;
             document.getElementById("curs").value = alumno[0].cursos[0];
         }
         axios.get(url+"cursos").then(res =>{
