@@ -89,12 +89,13 @@ const Alumno = ({id,alumnoData, actualizar}) =>
         if(asistencia.length === 0)
         {
             document.getElementById("spinner"+id).style.display = "inline-block";
-            await axios.post(url + 'save_asistencia', asistData).then(document.getElementById("spinner"+id).style.display = "none");
+            await axios.post(url + 'save_asistencia', asistData).then(document.getElementById("spinner"+id).style.display = "none").setInterval(1000);
+
         }
         else
         {
             document.getElementById("spinner"+id).style.display = "inline-block";
-            await axios.put(url + 'asistencia/' + asistencia[0]._id, asistData).then(document.getElementById("spinner"+id).style.display = "none");
+            await axios.put(url + 'asistencia/' + asistencia[0]._id, asistData).then(document.getElementById("spinner"+id).style.display = "none").setInterval(1000);
         }
     }
 
