@@ -64,16 +64,12 @@ const Alumno = ({id,alumnoData, actualizar}) =>
         switch(estado)
         {
             case 0: asist = "Presente";
-                    setEstado(1); 
             break;
             case 1: asist = "Retraso";
-                    setEstado(2);
             break;
             case 2: asist = "No Presente";
-                    setEstado(3);
             break;
             case 3: asist = "Pendiente";
-                    setEstado(0);
             break;
         }
 
@@ -89,13 +85,32 @@ const Alumno = ({id,alumnoData, actualizar}) =>
         if(asistencia.length === 0)
         {
             document.getElementById("spinner"+id).style.display = "inline-block";
-            await axios.post(url + 'save_asistencia', asistData).then(document.getElementById("spinner"+id).style.display = "none").setInterval(1000);
+            await axios.post(url + 'save_asistencia', asistData).then(document.getElementById("spinner"+id).style.display = "none");
 
         }
         else
         {
             document.getElementById("spinner"+id).style.display = "inline-block";
-            await axios.put(url + 'asistencia/' + asistencia[0]._id, asistData).then(document.getElementById("spinner"+id).style.display = "none").setInterval(1000);
+            await axios.put(url + 'asistencia/' + asistencia[0]._id, asistData).then(document.getElementById("spinner"+id).style.display = "none");
+        
+            switch(asist)
+        {
+            case 'Presente':
+                    setEstado(1); 
+            break;
+            case 'Retraso':
+                    setEstado(2);
+            break;
+            case 'No Presente':
+                    setEstado(3);
+            break;
+            case 'Pendiente': 
+                    setEstado(0);
+            break;
+        }
+        
+        
+        
         }
     }
 
