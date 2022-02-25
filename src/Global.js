@@ -1,5 +1,5 @@
 var Global = {
-	url: "https://backendabast.glitch.me/api/"
+	url: "https://app-abast-backend.herokuapp.com/api/"
 }
 
 export default Global;
