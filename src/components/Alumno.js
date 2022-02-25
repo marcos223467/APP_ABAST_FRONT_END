@@ -52,7 +52,7 @@ const Alumno = ({id,alumnoData, actualizar}) =>
                     
                 }
             })
-            //document.getElementById("spinner"+id).style.display = "none";
+            document.getElementById("spinner"+id).style.display = "none";
            
         }
         
