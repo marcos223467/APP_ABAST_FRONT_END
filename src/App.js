@@ -1,6 +1,6 @@
 import logo from './assets/img/logo.svg';
 import './assets/css/App.css';
-import Routers from './Routers'
+import Routers from './Routers';
 
 function App() {
   return (

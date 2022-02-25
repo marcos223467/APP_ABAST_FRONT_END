@@ -4,6 +4,8 @@ import Global from '../Global';
 import axios from "axios";
 import editar from "../assets/img/editar.png";
 import eliminar from "../assets/img/eliminar.png";
+import {Spinner} from 'reactstrap';
+
 const Alumno = ({id,alumnoData, actualizar}) =>
 {
     const url = Global.url;
@@ -50,27 +52,28 @@ const Alumno = ({id,alumnoData, actualizar}) =>
                     
                 }
             })
+            //document.getElementById("spinner"+id).style.display = "none";
            
         }
         
     },[curso, asistencia.length,estado]);
 
-    const controlAsistencia = () =>
+    const controlAsistencia = async() =>
     {
         var asist
         switch(estado)
         {
-            case 0: setEstado(1); 
-                    asist = "Presente";
+            case 0: asist = "Presente";
+                    setEstado(1); 
             break;
-            case 1: setEstado(2);
-                    asist = "Retraso";
+            case 1: asist = "Retraso";
+                    setEstado(2);
             break;
-            case 2: setEstado(3);
-                    asist = "No Presente";
+            case 2: asist = "No Presente";
+                    setEstado(3);
             break;
-            case 3: setEstado(0);
-                    asist = "Pendiente";
+            case 3: asist = "Pendiente";
+                    setEstado(0);
             break;
         }
 
@@ -85,17 +88,18 @@ const Alumno = ({id,alumnoData, actualizar}) =>
 
         if(asistencia.length === 0)
         {
-            axios.post(url + 'save_asistencia', asistData)
+            document.getElementById("spinner"+id).style.display = "inline-block";
+            await axios.post(url + 'save_asistencia', asistData).then(document.getElementById("spinner"+id).style.display = "none");
         }
         else
         {
-            axios.put(url + 'asistencia/' + asistencia[0]._id, asistData)
+            document.getElementById("spinner"+id).style.display = "inline-block";
+            await axios.put(url + 'asistencia/' + asistencia[0]._id, asistData).then(document.getElementById("spinner"+id).style.display = "none");
         }
     }
 
-    function CambiaEstado(event)
+    function CambiaEstado()
     {
-        event.preventDefault();
         controlAsistencia();
         actualizar(true);
     }
@@ -124,9 +128,12 @@ const Alumno = ({id,alumnoData, actualizar}) =>
                         </div>
                         <div className="row">
                             <div className="container-fluid" id="container-alumno">
-                                <div className="row row-cols-3 row-cols-sm-3 row-cols-md-3 row-cols-lg-3">
-                                    <div className="col-lg-8 col-md-8 col-sm-8 col-8">
+                                <div className="row row-cols-4 row-cols-sm-4 row-cols-md-4 row-cols-lg-4">
+                                    <div className="col-lg-6 col-md-6 col-sm-6 col-6">
                                         <button id={id} className="btn btn-secondary btn-asis" onClick={CambiaEstado}>Pendiente</button>
+                                    </div>
+                                    <div className="col-lg-2 col-md-2 col-sm-2 col-2">
+                                        <Spinner id={"spinner"+id} className="spinner" color="secondary" />
                                     </div>
                                     <div className="col-lg-2 col-md-2 col-sm-2 col-2">
                                         <a className="edit" href={'/editar_alumno?id=' + alumnoData._id}>
