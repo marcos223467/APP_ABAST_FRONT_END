@@ -49,10 +49,11 @@ const Alumno = ({id,alumnoData, actualizar}) =>
                                 setEstado(3);
                         break;
                     }
+                    document.getElementById("spinner"+id).style.display = "none";
                     
                 }
             })
-            document.getElementById("spinner"+id).style.display = "none";
+            
            
         }
         
