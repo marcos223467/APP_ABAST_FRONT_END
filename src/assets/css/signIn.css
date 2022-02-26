@@ -35,8 +35,3 @@ input
     display: block;
     margin: 0 auto;
 }
-
-#form-signin{
-    top: 50%;
-    bottom: 50%;
-}
