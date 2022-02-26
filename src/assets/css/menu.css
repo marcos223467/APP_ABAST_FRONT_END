@@ -1,12 +1,16 @@
 .card
 {
-    background: #d6d6d6;  /* fallback for old browsers */
+    background: #f5f5f5;  /* fallback for old browsers */
     width: 20rem;
     height: 10rem;
     border-radius: 15px;
     box-shadow: rgba(0, 0, 0, 0.3) 0px 10px 14px, rgba(0, 0, 0, 0.22) 0px 10px 12px;
     margin-top: 2%;
     margin-bottom: 5%;
+}
+
+i{
+    margin-top: 10px;
 }
 
 h2
