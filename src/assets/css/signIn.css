@@ -37,6 +37,6 @@ input
 }
 
 #form-signin{
-    display: flex;
-   align-items: center;
+    top: 50%;
+    bottom: 50%;
 }
