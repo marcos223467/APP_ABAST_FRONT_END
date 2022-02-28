@@ -48,10 +48,7 @@ const Alumnos = ({actualizar}) =>
         return(
             <div className="bd-example">
                 <div>
-                    <CSVLink data={asistencias} filename={'Listado de asistencia ' + curso}>
-                        <button type="button" className="btn btn-dark">Exportar Asistencia</button>
-                    </CSVLink>
-                    
+                    <button id="volver" type="button" className="btn btn-dark" onClick={Volver}>Volver</button>
                 </div>
                 <div>
                     <h1>Curso {curso}</h1>
@@ -70,7 +67,10 @@ const Alumnos = ({actualizar}) =>
                     </div>
                 </div>
                 <div>
-                    <button id="volver" type="button" className="btn btn-dark" onClick={Volver}>Volver</button>
+                    <CSVLink data={asistencias} filename={'Listado de asistencia ' + curso}>
+                        <button type="button" className="btn btn-dark">Exportar Asistencia</button>
+                    </CSVLink>
+                    
                 </div>
             </div>
         )
@@ -80,10 +80,7 @@ const Alumnos = ({actualizar}) =>
         return(
             <div className="bd-example">
                 <div>
-                    <CSVLink data={asistencias} filename={'Listado de asistencia ' + curso}>
-                        <button type="button" className="btn btn-dark">Exportar Asistencia</button>
-                    </CSVLink>
-                    
+                    <button id="volver" type="button" className="btn btn-dark" onClick={Volver}>Volver</button>
                 </div>
                 <div>
                     <h1>Curso{curso}</h1>
@@ -102,7 +99,10 @@ const Alumnos = ({actualizar}) =>
                     </div>
                 </div>
                 <div>
-                    <button id="volver" type="button" className="btn btn-dark" onClick={Volver}>Volver</button>
+                    <CSVLink data={asistencias} filename={'Listado de asistencia ' + curso}>
+                        <button type="button" className="btn btn-dark">Exportar Asistencia</button>
+                    </CSVLink>
+                    
                 </div>
             </div>
         )

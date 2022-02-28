@@ -5,11 +5,6 @@ h3
     margin: 0 auto;
 }
 
-h1
-{
-    color: black;
-}
-
 #txt
 {
     text-align: left;
@@ -23,7 +18,12 @@ h1
     margin: 0 auto;
     height: 20rem;
     padding: 2%;
-    margin-bottom: 5%;
+    margin-bottom: 7%;
+}
+
+#cursos
+{
+    margin-bottom: 8%!important;
 }
 
 #add
@@ -33,12 +33,14 @@ h1
     height: 5rem;
     color: #e4006a;
     margin-bottom: 5%;
+    text-align: center;
 }
 
 #add-i
 {
     float: left;
     font-size: 20px;
+    margin-top: 1% !important;
 }
 
 #edit

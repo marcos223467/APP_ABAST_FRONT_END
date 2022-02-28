@@ -36,7 +36,8 @@ const UserForm = () =>
             {
                 console.log(error);
             });
-        Volver();
+        alert("Usuario registrado con éxito");
+        window.location.reload();
     }
 
     function Volver(event)
@@ -46,6 +47,9 @@ const UserForm = () =>
     }
     return(
         <div className="bd-example">
+            <div>
+                <button id="volver" type="button" className="btn btn-dark" onClick={Volver}>Volver</button>
+            </div>
             <form onSubmit={createUser}>
                 <fieldset disabled="">
                     <legend className="mb-4">Alta Usuario</legend>
@@ -55,7 +59,7 @@ const UserForm = () =>
                     </div>
                     <div className="mb-3">
                         <small className="">Contraseña</small>
-                        <input type="text" id="disabledTextInput" className="form-control" ref={password} onChange={changeState}/>
+                        <input type="password" id="disabledTextInput" className="form-control" ref={password} onChange={changeState}/>
                     </div>
                     <div className="mb-3">
                         <small className="">Nombre</small>
@@ -75,10 +79,6 @@ const UserForm = () =>
                     <button type="submit" className="btn btn-primary" id="btn">Registrar</button>
                 </fieldset>
             </form>
-            <br/>
-            <div>
-                <button id="volver" type="button" className="btn btn-dark" onClick={Volver}>Volver</button>
-            </div>
         </div>
     )
 }

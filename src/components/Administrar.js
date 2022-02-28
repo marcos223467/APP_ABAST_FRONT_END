@@ -23,21 +23,24 @@ const Administrar = () =>
     }
     return(
         <div className="container-fluid" id="container">
+            <div>
+                <button id="volver" type="button" className="btn btn-dark" onClick={Volver}>Volver</button>
+            </div>
             <div className="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-2">
 
                 <div className="col">
                     <button className="btn-menu" onClick={Alumnos}>
-                        <div className="card">
-                            <div className="card-body">
-                                <i id="i" class="fa-solid fa-graduation-cap"></i>
-                                <h2 className="card-title">Administrar Alumnos</h2>
-                            </div>
+                    <div className="card-adm">
+                        <div className="card-body">
+                            <i id="i" class="fa-solid fa-graduation-cap"></i>
+                            <h2 className="card-title">Administrar Alumnos</h2>
                         </div>
+                    </div>
                     </button>
                 </div>
                 <div className="col">
                     <button className="btn-menu" onClick={Usuarios}>
-                        <div className="card">
+                        <div className="card-adm">
                             <div className="card-body">
                                 <i id="i" class="fa-solid fa-user-gear"></i>
                                 <h2 className="card-title">Administrar Usuarios</h2>
@@ -45,9 +48,6 @@ const Administrar = () =>
                         </div>
                     </button>
                 </div>
-            </div>
-            <div>
-                <button id="volver" type="button" className="btn btn-dark" onClick={Volver}>Volver</button>
             </div>
         </div>
     )

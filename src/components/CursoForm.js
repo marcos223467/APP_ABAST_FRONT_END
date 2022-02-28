@@ -49,6 +49,9 @@ const CursoForm = () =>
     }
     return(
         <div className="bd-example">
+            <div>
+                <button id="volver" type="button" class="btn btn-dark" onClick={Volver}>Volver</button>
+            </div>
             <form onSubmit={createCurso}>
                 <fieldset disabled="">
                     <legend className="mb-4">Nuevo curso</legend>
@@ -84,10 +87,6 @@ const CursoForm = () =>
                     <button type="submit" className="btn btn-primary" id="btn">Registrar</button>
                 </fieldset>
             </form>
-            <br/>
-            <div>
-                <button id="volver" type="button" class="btn btn-dark" onClick={Volver}>Volver</button>
-            </div>
         </div>
     )
 }

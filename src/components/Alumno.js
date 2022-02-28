@@ -159,13 +159,13 @@ const Alumno = ({id,alumnoData, actualizar}) =>
                                     </div>
                                     <div className="col-lg-2 col-md-2 col-sm-2 col-2">
                                         <a className="edit" href={'/editar_alumno?id=' + alumnoData._id}>
-                                            <img src={editar} width="20"></img>
+                                            <i id="adm-i" class="fa-solid fa-pen-to-square"></i>
                                         </a>
                                     </div>
                                     <div className="col-lg-2 col-md-2 col-sm-2 col-2">
                                         <button type="button" id="rmv" className="btn-remove" data-bs-toggle="modal" 
                                             data-bs-target={"#myModal"+id}>
-                                            <img src={eliminar} width="20"></img>
+                                            <i id="adm-i" class="fa-solid fa-trash-can"></i>
                                         </button>
                                     </div>
                                 </div>

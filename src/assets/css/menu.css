@@ -9,6 +9,22 @@
     margin-bottom: 5%;
 }
 
+.card-adm
+{
+    background: #f5f5f5;  /* fallback for old browsers */
+    width: 20rem;
+    height: 12rem;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 10px 14px, rgba(0, 0, 0, 0.22) 0px 10px 12px;
+    margin-top: 2%;
+    margin-bottom: 5%;
+}
+
+#tabla-adm
+{
+    margin-bottom: 10%;
+}
+
 i{
     margin-top: 25px;
 }

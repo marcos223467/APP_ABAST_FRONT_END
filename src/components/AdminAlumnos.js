@@ -47,7 +47,10 @@ const AdminAlumnos = () =>
 
     return(
         <div className="bd-example">
-            <table className="table table-striped">
+            <div>
+                <button id="volver" type="button" className="btn btn-secondary" onClick={Volver}>Volver</button>
+            </div>
+            <table className="table table-striped" id="tabla-adm">
                 <thead>
                     <tr>
                         <th scope="col">#</th>
@@ -112,9 +115,6 @@ const AdminAlumnos = () =>
                     }
                 </tbody>
             </table>
-            <div>
-                <button id="volver" type="button" className="btn btn-secondary" onClick={Volver}>Volver</button>
-            </div>
         </div>
     )
 }

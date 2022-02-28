@@ -89,9 +89,12 @@ const AlumnoEdit = () =>
     }
     return(
         <div className="bd-example">
+            <div>
+                <button id="volver" type="button" class="btn btn-dark" onClick={Volver}>Volver</button>
+            </div>
             <form onSubmit={editAlumn}>
                 <fieldset disabled="">
-                    <legend className="mb-4">Alta Alumno</legend>
+                    <legend className="mb-4">Editar Alumno</legend>
                     <div className="mb-3">
                         <small className="">Nombre</small>
                         <input type="text" id="nombre" className="form-control" ref={nombre} onChange={changeState}/>
@@ -115,13 +118,9 @@ const AlumnoEdit = () =>
                         </select>
                     </div>
                    
-                    <button type="submit" className="btn btn-primary" id="btn">Registrar</button>
+                    <button type="submit" className="btn btn-primary" id="btn">Editar</button>
                 </fieldset>
             </form>
-            <br/>
-            <div>
-                <button id="volver" type="button" class="btn btn-dark" onClick={Volver}>Volver</button>
-            </div>
         </div>
     )
 }

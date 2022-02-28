@@ -59,8 +59,8 @@ const AlumnoForm = () =>
             {
                 console.log(error);
             });
-        console.log("Alumno dado de alta!!!")
-        Volver();
+        alert("Alumno dado de alta correctamente");
+        window.location.reload();
     }
 
     function Volver(event)
@@ -70,6 +70,9 @@ const AlumnoForm = () =>
     }
     return(
         <div className="bd-example">
+            <div>
+                <button id="volver" type="button" class="btn btn-dark" onClick={Volver}>Volver</button>
+            </div>
             <form onSubmit={createAlumn}>
                 <fieldset disabled="">
                     <legend className="mb-4">Alta Alumno</legend>
@@ -99,10 +102,6 @@ const AlumnoForm = () =>
                     <button type="submit" className="btn btn-primary" id="btn">Registrar</button>
                 </fieldset>
             </form>
-            <br/>
-            <div>
-                <button id="volver" type="button" class="btn btn-dark" onClick={Volver}>Volver</button>
-            </div>
         </div>
     )
 }

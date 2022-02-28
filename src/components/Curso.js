@@ -40,10 +40,10 @@ const Curso = ({id, cursoData}) =>
                     <div>
                         <button type="button" id="rmv" className="btn-remove" data-bs-toggle="modal" 
                             data-bs-target={"#myModal"+id}>
-                            <img src={eliminar} width="20" alt=""></img>
+                            <i id="adm-i" class="fa-solid fa-trash-can"></i>
                         </button>
                         <a id="edit" href={'/editar_curso?id=' + cursoData._id}>
-                            <img src={editar} width="20" alt=""></img>
+                            <i id="adm-i" class="fa-solid fa-pen-to-square"></i>
                         </a>
                     </div>
                 </div>

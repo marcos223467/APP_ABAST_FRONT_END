@@ -30,6 +30,9 @@ const Cursos = () =>
     {
         return(
             <div className="bd-example">
+                <div>
+                    <button id="volver" type="button" className="btn btn-secondary" onClick={Volver}>Volver</button>
+                </div>
                 <button className="btn-menu" onClick={cursoForm}>
                     <div className="card" id="add">
                         <div className="card-body">
@@ -38,7 +41,7 @@ const Cursos = () =>
                         </div>
                     </div>
                 </button>
-                <div className="container">
+                <div className="container" id="cursos">
                     <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3">
                         { cursos.map((curso,i) =>{
                             return(
@@ -49,9 +52,6 @@ const Cursos = () =>
                             );
                         })}
                     </div>
-                </div>
-                <div>
-                    <button id="volver" type="button" className="btn btn-secondary" onClick={Volver}>Volver</button>
                 </div>
             </div>
         )
@@ -60,7 +60,10 @@ const Cursos = () =>
     {
         return(
             <div className="bd-example">
-                <div className="container">
+                <div>
+                    <button id="volver" type="button" className="btn btn-secondary" onClick={Volver}>Volver</button>
+                </div>
+                <div className="container" id="cursos">
                     <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3">
                         { cursos.map((curso,i) =>{
                             return(
@@ -71,9 +74,6 @@ const Cursos = () =>
                             );
                         })}
                     </div>
-                </div>
-                <div>
-                    <button id="volver" type="button" className="btn btn-secondary" onClick={Volver}>Volver</button>
                 </div>
             </div>
         )
