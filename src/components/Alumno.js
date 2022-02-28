@@ -215,7 +215,7 @@ const Alumno = ({id,alumnoData, actualizar}) =>
                         </div>
                         <div className="row">
                             <div className="container-fluid" id="container-alumno">
-                                <div className="row row-cols-1 row-cols-sm-1 row-cols-md-1 row-cols-lg-1">
+                                <div className="row row-cols-2 row-cols-sm-2 row-cols-md-2 row-cols-lg-2">
                                     <div className="col">
                                         <button id={id} className="btn btn-secondary btn-asis" onClick={CambiaEstado}>Pendiente</button>
                                     </div>
