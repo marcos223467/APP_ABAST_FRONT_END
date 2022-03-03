@@ -32,7 +32,7 @@ const SignIn = () =>{
         //Evitamos recargar la página al recibir los datos del formulario
         event.preventDefault();
         changeState();
-
+        let contador = 0;
         for(let i = 0; i < users.users.length; i++)
         {
             if(userData.email === users.users[i].email && userData.password === users.users[i].password)
@@ -41,11 +41,17 @@ const SignIn = () =>{
                 window.location.href='./menu';
                 
             }
+            else
+            {
+                contador++;
+            }
                 
         }
-        alert("Error en las credenciales");
-        window.location.reload();
-        
+        if(contador === i)
+        {
+            alert("Error en las credenciales");
+            window.location.reload();
+        }
         
     }
 
