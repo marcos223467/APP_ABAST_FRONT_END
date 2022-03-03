@@ -39,7 +39,7 @@ const Alumnos = ({actualizar}) =>
         {
             axios.get(url+"/asistencias/" + curso).then(res =>{
                 getAsistencias(res.data.asistencias);
-            }).then(console.log("actualizo"));
+            });
             
         }
     }

@@ -26,7 +26,6 @@ const CursoEdit = () =>
                 getCurso(res.data.curso);
             });
         }
-        console.log(curso[0]);
         if(curso.length > 0)
         {
             let fecha_extra = "T00:00:00.000Z";
@@ -58,17 +57,16 @@ const CursoEdit = () =>
                 fecha_ini: fecha_ini.current.value,
                 fecha_fin: fecha_fin.current.value
         });
-        console.log(cursoData);
     }
 
     const editCurso = async(event) =>
     {
         event.preventDefault();
         changeState();
-        console.log("Curso editado!!!")
         axios.put(url+"/curso/" + id, cursoData).then((res) =>
             {
                 console.log(res);
+                alert("Curso editado");
             },(error) =>
             {
                 console.log(error);

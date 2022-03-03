@@ -33,7 +33,6 @@ const UserEdit = () =>
             document.getElementById("apellidos").value = user[0].apellidos;
             document.getElementById("tipo").value = user[0].tipo;
         }
-        console.log(user);
 
     },[id, user.length]);
 
@@ -45,16 +44,15 @@ const UserEdit = () =>
                 apellidos: apellidos.current.value,
                 tipo: tipo.current.value
         });
-        console.log(userData);
     }
 
     const editUser = async(event) =>
     {
         event.preventDefault();
         changeState();
-        console.log("Usuario editado!!!")
         axios.put(url+"/user/" + id, userData).then((res) =>
             {
+                alert("Usuario editado");
                 console.log(res);
             },(error) =>
             {

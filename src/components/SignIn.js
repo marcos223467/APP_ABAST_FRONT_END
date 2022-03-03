@@ -26,7 +26,6 @@ const SignIn = () =>{
                 email: email.current.value,
                 password: password.current.value
         });
-        console.log(userData);
     }
 
     const receiveData = async(event) =>{
@@ -38,11 +37,14 @@ const SignIn = () =>{
         {
             if(userData.email === users.users[i].email && userData.password === users.users[i].password)
             {
-                console.log("Usuario correcto");
                 document.cookie = JSON.stringify(users.users[i]);
-                console.log(document.cookie);
                 window.location.href='./menu';
                 
+            }
+            else
+            {
+                alert("Error en las credenciales");
+                window.location.reload();
             }
                 
         }

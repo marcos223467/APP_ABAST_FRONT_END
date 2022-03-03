@@ -17,7 +17,6 @@ const AlumnoForm = () =>
     useEffect(() =>{
         axios.get(url+"cursos").then(res =>{
             getCursos(res.data.cursos);
-            //console.log(cursos);
         })
         
     }, [cursos.length]);
@@ -45,7 +44,6 @@ const AlumnoForm = () =>
                 cursos: curso.current.value,
                 activo: true
         });
-        console.log(alumData);
     }
 
     const createAlumn = async(event) =>

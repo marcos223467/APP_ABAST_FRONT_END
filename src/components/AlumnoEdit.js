@@ -25,7 +25,6 @@ const AlumnoEdit = () =>
                 getAlumno(res.data.alumno);
             });
         }
-        console.log(alumno[0]);
         if(alumno.length > 0)
         {
             let fecha_extra = "T00:00:00.000Z";
@@ -64,7 +63,6 @@ const AlumnoEdit = () =>
                 cursos: curso.current.value,
                 activo: true
         });
-        console.log(alumData);
     }
 
     const editAlumn = async(event) =>
@@ -78,7 +76,7 @@ const AlumnoEdit = () =>
             {
                 console.log(error);
             });
-        console.log("Alumno actualizado!!!")
+        alert("Alumno actualizado");
         Volver();
     }
 

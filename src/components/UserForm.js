@@ -21,22 +21,20 @@ const UserForm = () =>
                 apellidos: apellidos.current.value,
                 tipo: tipo.current.value
         });
-        console.log(userData);
     }
 
     const createUser = async(event) =>
     {
         event.preventDefault();
         changeState();
-        console.log("Usuario dado de alta!!!")
         axios.post(url+"save_user", userData).then((res) =>
             {
+                alert("Usuario registrado con éxito");
                 console.log(res);
             },(error) =>
             {
                 console.log(error);
             });
-        alert("Usuario registrado con éxito");
         window.location.reload();
     }
 

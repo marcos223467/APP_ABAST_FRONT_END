@@ -24,17 +24,16 @@ const CursoForm = () =>
                 fecha_ini: fecha_ini.current.value,
                 fecha_fin: fecha_fin.current.value
         });
-        console.log(cursoData);
     }
 
     const createCurso = async(event) =>
     {
         event.preventDefault();
         changeState();
-        console.log("Curso creado!!!")
         axios.post(url+"save_curso", cursoData).then((res) =>
             {
                 console.log(res);
+                alert("Curso creado");
             },(error) =>
             {
                 console.log(error);
