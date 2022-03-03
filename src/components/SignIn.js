@@ -32,14 +32,14 @@ const SignIn = () =>{
         //Evitamos recargar la página al recibir los datos del formulario
         event.preventDefault();
         changeState();
-        let contador = 0;
+        var contador = 0;
         for(let i = 0; i < users.users.length; i++)
         {
             if(userData.email === users.users[i].email && userData.password === users.users[i].password)
             {
+                contador = 0;
                 document.cookie = JSON.stringify(users.users[i]);
                 window.location.href='./menu';
-                
             }
             else
             {
@@ -47,7 +47,7 @@ const SignIn = () =>{
             }
                 
         }
-        if(contador === users.users.length - 1)
+        if(contador === users.users.length)
         {
             alert("Error en las credenciales");
             window.location.reload();
