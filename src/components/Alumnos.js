@@ -66,7 +66,7 @@ const Alumnos = ({actualizar}) =>
                         })}
                     </div>
                 </div>
-                <div>
+                <div id="exportar">
                     <CSVLink data={asistencias} filename={'Listado de asistencia ' + curso}>
                         <button type="button" className="btn btn-dark">Exportar Asistencia</button>
                     </CSVLink>
@@ -98,7 +98,7 @@ const Alumnos = ({actualizar}) =>
                         })}
                     </div>
                 </div>
-                <div>
+                <div id="exportar">
                     <CSVLink data={asistencias} filename={'Listado de asistencia ' + curso}>
                         <button type="button" className="btn btn-dark">Exportar Asistencia</button>
                     </CSVLink>
