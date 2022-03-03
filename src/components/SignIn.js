@@ -41,13 +41,10 @@ const SignIn = () =>{
                 window.location.href='./menu';
                 
             }
-            else
-            {
-                alert("Error en las credenciales");
-                window.location.reload();
-            }
                 
         }
+        alert("Error en las credenciales");
+        window.location.reload();
         
         
     }
