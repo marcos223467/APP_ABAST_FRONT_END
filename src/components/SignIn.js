@@ -47,7 +47,7 @@ const SignIn = () =>{
             }
                 
         }
-        if(contador === i)
+        if(contador === users.users.length - 1)
         {
             alert("Error en las credenciales");
             window.location.reload();
