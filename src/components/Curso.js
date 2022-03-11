@@ -43,7 +43,7 @@ const Curso = ({id, cursoData}) =>
                             <i id="adm-i" class="fa-solid fa-trash-can"></i>
                         </button>
                         <a id="edit" href={'/editar_curso?id=' + cursoData._id}>
-                            <i id="adm-i" class="fa-solid fa-pen-to-square"></i>
+                            <i id="adm-i" className="fa-solid fa-pen-to-square"></i>
                         </a>
                     </div>
                 </div>

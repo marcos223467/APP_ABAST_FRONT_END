@@ -53,12 +53,11 @@ const AlumnoForm = () =>
         axios.post(url+"save_alumno", alumData).then((res) =>
             {
                 console.log(res);
+                window.location.reload();
             },(error) =>
             {
                 console.log(error);
             });
-        alert("Alumno dado de alta correctamente");
-        window.location.reload();
     }
 
     function Volver(event)

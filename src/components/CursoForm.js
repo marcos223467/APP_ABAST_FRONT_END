@@ -33,7 +33,6 @@ const CursoForm = () =>
         axios.post(url+"save_curso", cursoData).then((res) =>
             {
                 console.log(res);
-                alert("Curso creado");
                 window.location.href = "/cursos";
             },(error) =>
             {
@@ -50,7 +49,7 @@ const CursoForm = () =>
     return(
         <div className="bd-example">
             <div>
-                <button id="volver" type="button" class="btn btn-dark" onClick={Volver}>Volver</button>
+                <button id="volver" type="button" className="btn btn-dark" onClick={Volver}>Volver</button>
             </div>
             <form onSubmit={createCurso}>
                 <fieldset disabled="">
