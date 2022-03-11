@@ -17,6 +17,7 @@ import AlumnoEdit from './components/AlumnoEdit';
 import Administrar from './components/Administrar';
 import AdminAlumnos from './components/AdminAlumnos';
 import Info from './components/Info';
+import Asistencias from './components/Asistencias';
 const Router = () => {
     return (
 
@@ -38,6 +39,7 @@ const Router = () => {
                 <Route exact path="/admin" element={<Administrar />} />
                 <Route exact path="/admin_alums" element={<AdminAlumnos />} />
                 <Route exact path="/info" element={<Info/>} />
+                <Route exact path="/asistencias" element={<Asistencias/>} />
             </Routes>
             <Footer/>
         </BrowserRouter>

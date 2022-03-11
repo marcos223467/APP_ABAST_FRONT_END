@@ -131,6 +131,12 @@ const Alumno = ({id,alumnoData, actualizar}) =>
         axios.delete(url+"/delete_alumno/" + alumnoData._id).then(window.location.reload());
     }
     var fecha = new Date(alumnoData.fecha_nacimiento);
+
+    function VerAsistencia(event)
+    {
+        event.preventDefault();
+        window.location.href = "/asistencias";
+    }
     if(us.tipo === "admin")
     {
         return(
@@ -199,35 +205,40 @@ const Alumno = ({id,alumnoData, actualizar}) =>
     else if(us.tipo === "profesor")
     {
         return(
-            <div className="container">
-                <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3">
-                    <div className="card" id="alumno">
-                        <div className="card-body">
-                            <div className="row">
-                                <h3 className="card-title">{alumnoData.apellidos} {alumnoData.nombre}</h3>
-                            </div>
-                            <div className="row">
-                                <p id="txt" className="card-text">Edad: {alumnoData.edad}</p>
-                            </div>
-                            <div className="row">
-                                <p id = "txt" className="card-text">Fecha de nacimiento: {fecha.getDate() + "-" + (fecha.getMonth() + 1) + "-" + fecha.getFullYear()}</p>
-                            </div>
+        <div className="container">
+            <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3">
+                <div className="card" id="alumno">
+                    <div className="card-body">
+                        <div className="row">
+                            <h3 className="card-title">{alumnoData.apellidos} {alumnoData.nombre}</h3>
                         </div>
                         <div className="row">
-                            <div className="container-fluid" id="container-alumno">
-                                <div className="row row-cols-2 row-cols-sm-2 row-cols-md-2 row-cols-lg-2">
+                            <p id="txt" className="card-text">Edad: {alumnoData.edad}</p>
+                        </div>
+                        <div className="row">
+                            <p id = "txt" className="card-text">Fecha de nacimiento: {fecha.getDate() + "-" + (fecha.getMonth() + 1) + "-" + fecha.getFullYear()}</p>
+                        </div>
+                    </div>
+                    <div className="row">
+                        <div className="container-fluid" id="container-alumno">
+                            <div className="row row-cols-2 row-cols-sm-2 row-cols-md-2 row-cols-lg-2">
+                                <div className="col">
+                                    <button id={id} className="btn btn-secondary btn-asis" onClick={CambiaEstado}>Pendiente</button>
+                                </div>
+                                <div className="col">
+                                    <Spinner id={"spinner"+id} className="spinner" color="secondary" />
+                                </div>
+                                <div className="row">
                                     <div className="col">
-                                        <button id={id} className="btn btn-secondary btn-asis" onClick={CambiaEstado}>Pendiente</button>
-                                    </div>
-                                    <div className="col">
-                                        <Spinner id={"spinner"+id} className="spinner" color="secondary" />
+                                        <button id="asist" type="button" className="btn btn-primary" onClick={VerAsistencia}>Asistencia</button>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div> 
+            </div>
+        </div>
         )
     }
     

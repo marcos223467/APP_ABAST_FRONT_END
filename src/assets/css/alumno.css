@@ -59,3 +59,16 @@ label
 {
     display: none;
 }
+
+#asist
+{
+    display:block;
+    width: 18rem;
+    margin-top: 30%;
+    margin-left: 5%;
+}
+
+.display-block
+{
+    display: block;
+}

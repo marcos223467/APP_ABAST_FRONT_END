@@ -117,15 +117,32 @@ const Menu = () =>
                             </div>
                         </div>
                     </button>
-                    <br/>        
-                    <button className="btn-menu" onClick={Cursos}>
-                        <div className="card">
-                            <div className="card-body">
-                                <i id="i" class="fa-solid fa-book"></i>
-                                <h2 className="card-title">Cursos</h2>
+                    <br/>
+                    <div className="container-fluid" id="container">
+                        <div className="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-2"> 
+                            <div className="col">
+                                <button className="btn-menu" onClick={Cursos}>
+                                    <div className="card">
+                                        <div className="card-body">
+                                            <i id="i" class="fa-solid fa-book"></i>
+                                            <h2 className="card-title">Cursos</h2>
+                                        </div>
+                                    </div>
+                                </button>
+                            </div>
+
+                            <div className="col">
+                                <button className="btn-menu" onClick={AlumForm}>
+                                    <div className="card">
+                                        <div className="card-body">
+                                            <i id="i" class="fa-solid fa-graduation-cap"></i>
+                                            <h2 className="card-title">Alta alumno</h2>
+                                        </div>
+                                    </div>
+                                </button>
                             </div>
                         </div>
-                    </button>
+                    </div>
                 </div>
             )
         }
