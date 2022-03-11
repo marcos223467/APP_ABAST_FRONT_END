@@ -36,7 +36,7 @@ const Cursos = () =>
                 <button className="btn-menu" onClick={cursoForm}>
                     <div className="card" id="add">
                         <div className="card-body">
-                            <i id="add-i" class="fa-solid fa-plus"></i>
+                            <i id="add-i" className="fa-solid fa-plus"></i>
                             <h5 className="card-title">Añadir curso</h5>
                         </div>
                     </div>

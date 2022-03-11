@@ -77,26 +77,26 @@ const UserEdit = () =>
                     <legend className="mb-4">Editar Usuario</legend>
                     <div className="mb-3">
                         <small className="">Email</small>
-                        <input type="email" id="disabledTextInput" id="email" className="form-control" 
+                        <input type="email" id="email" className="form-control" 
                             ref={email} placeholder="email@example.com" onChange={changeState}/>
                     </div>
                     <div className="mb-3">
                         <small className="">Contraseña</small>
-                        <input type="text" id="disabledTextInput" id="pssw" className="form-control" 
+                        <input type="text" id="pssw" className="form-control" 
                             ref={password} onChange={changeState}/>
                     </div>
                     <div className="mb-3">
                         <small className="">Nombre</small>
-                        <input type="text" id="disabledTextInput" id="nombre" className="form-control" 
+                        <input type="text" id="nombre" className="form-control" 
                             ref={nombre} onChange={changeState}/>
                     </div>
                     <div className="mb-3">
                         <small className="">Apellidos</small>
-                        <input type="text" id="disabledTextInput" id="apellidos" className="form-control" 
+                        <input type="text" id="apellidos" className="form-control" 
                             ref={apellidos} onChange={changeState}/>
                     </div>
                     <div className="mb-3">
-                        <select id="disabledSelect" id="tipo" className="form-select" ref={tipo} onChange={changeState}>
+                        <select id="tipo" className="form-select" ref={tipo} onChange={changeState}>
                             <option disable selected>Selecciona un rol</option>
                             <option value="admin">Administrador</option>
                             <option value="profesor">Profesor</option>

@@ -76,7 +76,6 @@ const AlumnoEdit = () =>
             {
                 console.log(error);
             });
-        alert("Alumno actualizado");
         Volver();
     }
 

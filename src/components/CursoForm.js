@@ -34,12 +34,13 @@ const CursoForm = () =>
             {
                 console.log(res);
                 alert("Curso creado");
+                window.location.href = "/cursos";
             },(error) =>
             {
                 console.log(error);
             });
 
-        window.location.href = "/cursos";
+        
     }
     function Volver(event)
     {
