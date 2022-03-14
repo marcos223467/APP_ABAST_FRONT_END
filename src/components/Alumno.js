@@ -135,7 +135,7 @@ const Alumno = ({id,alumnoData, actualizar}) =>
     function VerAsistencia(event)
     {
         event.preventDefault();
-        window.location.href = "/asistencias";
+        window.location.href = "/asistencias?id=" + alumnoData._id + "&curso=" + curso;
     }
     if(us.tipo === "admin")
     {
@@ -173,6 +173,11 @@ const Alumno = ({id,alumnoData, actualizar}) =>
                                             data-bs-target={"#myModal"+id}>
                                             <i id="adm-i" class="fa-solid fa-trash-can"></i>
                                         </button>
+                                    </div>
+                                    <div className="row">
+                                        <div className="col">
+                                            <button id="asist" type="button" className="btn btn-primary" onClick={VerAsistencia}>Asistencia</button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
