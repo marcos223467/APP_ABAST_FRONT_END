@@ -5,7 +5,7 @@ const Info = () =>
     function Volver(event)
     {
         event.preventDefault();
-        window.location.href ='/';
+        window.history.back();
     }
 
     return(

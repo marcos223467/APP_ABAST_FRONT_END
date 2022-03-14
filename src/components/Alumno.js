@@ -210,7 +210,7 @@ const Alumno = ({id,alumnoData, actualizar}) =>
     else if(us.tipo === "profesor")
     {
         return(
-        <div className="container">
+            <div className="container">
             <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3">
                 <div className="card" id="alumno">
                     <div className="card-body">
@@ -227,10 +227,10 @@ const Alumno = ({id,alumnoData, actualizar}) =>
                     <div className="row">
                         <div className="container-fluid" id="container-alumno">
                             <div className="row row-cols-2 row-cols-sm-2 row-cols-md-2 row-cols-lg-2">
-                                <div className="col">
+                                <div className="col-lg-6 col-md-6 col-sm-6 col-6">
                                     <button id={id} className="btn btn-secondary btn-asis" onClick={CambiaEstado}>Pendiente</button>
                                 </div>
-                                <div className="col">
+                                <div className="col-lg-2 col-md-2 col-sm-2 col-2">
                                     <Spinner id={"spinner"+id} className="spinner" color="secondary" />
                                 </div>
                                 <div className="row">
