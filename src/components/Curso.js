@@ -30,20 +30,34 @@ const Curso = ({id, cursoData}) =>
         axios.delete(url+"/delete_curso/" + cursoData._id).then(window.location.reload());
     }
 
+    function Archivar()
+    {
+        cursoData.archivado = true;
+        axios.put(url+"/curso/" + cursoData._id, cursoData).then(setInterval(function (){window.location.reload()}, 1000));
+    }
     function ComprobarCurso()
     {
-        if(hoy >= fecha_fin)
+        if(!cursoData.archivado)
         {
-            return(
-                <CSVLink data={asistencia} filename={'Listado de asistencia ' + cursoData.nombre}>
-                    <button className="btn btn-secondary">Cerrar Curso</button>
-                </CSVLink>
-            )
+            if(hoy >= fecha_fin)
+            {
+                return(
+                   <button className="btn btn-secondary" data-bs-toggle="modal" data-bs-target={"#archivar"+id}>Cerrar Curso</button>
+                )
+            }
+            else
+            {
+                return(
+                    <button id="cerrarCurso" type="button" className="btn disabled">Cerrar Curso</button>
+                )
+            }
         }
         else
         {
             return(
-                <button id="cerrarCurso" type="button" className="btn disabled">Cerrar Curso</button>
+                <CSVLink data={asistencia} filename={'Listado de asistencia ' + cursoData.nombre}>
+                    <button className="btn btn-primary" id="btn-asis">Exportar Asistencia</button>
+                </CSVLink>
             )
         }
     }
@@ -100,6 +114,28 @@ const Curso = ({id, cursoData}) =>
                             <div className="modal-footer">
                                 <button id="eliminar" type="button" className="btn btn-default" 
                                         data-dismiss="modal" onClick={Eliminar}>Eliminar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="modal fade" id={"archivar" + id} tabIndex="-1" role="dialog">
+                    <div className="modal-dialog" role="document">
+                        <div className="modal-content">
+                            <div className="modal-header">
+                                <button id="cerrar" type="button" className="btn-close" data-bs-dismiss="modal"  aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                                <h4 id="titulo" className="modal-title">Archivar curso</h4>
+                            </div>
+                            <div className="modal-body">
+                                <p>¿Estás seguro de querer archivar este curso?</p>
+                            </div>
+                            <div className="modal-footer">
+                                <button id="eliminar" type="button" className="btn btn-default" 
+                                        data-dismiss="modal" onClick={Archivar}>
+                                            Archivar
+                                </button>
                             </div>
                         </div>
                     </div>

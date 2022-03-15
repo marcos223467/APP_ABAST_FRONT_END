@@ -30,7 +30,7 @@ const Alumnos = ({actualizar}) =>
     function Volver(event)
     {
         event.preventDefault();
-        window.location.href ='/cursos';
+        window.history.back();
     }
 
     function actualizar(estado)

@@ -100,20 +100,20 @@ const Alumno = ({id,alumnoData, actualizar}) =>
             await axios.put(url + 'asistencia/' + asistencia[0]._id, asistData);
         
             switch(asist)
-        {
-            case 'Presente':
-                    setEstado(1); 
-            break;
-            case 'Retraso':
-                    setEstado(2);
-            break;
-            case 'No Presente':
-                    setEstado(3);
-            break;
-            case 'Pendiente': 
-                    setEstado(0);
-            break;
-        }
+            {
+                case 'Presente':
+                        setEstado(1); 
+                break;
+                case 'Retraso':
+                        setEstado(2);
+                break;
+                case 'No Presente':
+                        setEstado(3);
+                break;
+                case 'Pendiente': 
+                        setEstado(0);
+                break;
+            }
         
         
         

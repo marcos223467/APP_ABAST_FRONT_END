@@ -3,7 +3,7 @@ import '../assets/css/cursos.css';
 import Global from '../Global';
 import axios from "axios";
 import Curso from './Curso';
-const Cursos = () =>
+const Cursos_Archivados = () =>
 {
     const url = Global.url;
     const [cursos, getCursos] = useState([]);
@@ -33,18 +33,11 @@ const Cursos = () =>
                 <div>
                     <button id="volver" type="button" className="btn btn-secondary" onClick={Volver}>Volver</button>
                 </div>
-                <button className="btn-menu" onClick={cursoForm}>
-                    <div className="card" id="add">
-                        <div className="card-body">
-                            <i id="add-i" className="fa-solid fa-plus"></i>
-                            <h5 className="card-title">Añadir curso</h5>
-                        </div>
-                    </div>
-                </button>
+                
                 <div className="container" id="cursos">
                     <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3">
                         { cursos.map((curso,i) =>{
-                            if(!curso.archivado)
+                            if(curso.archivado)
                             {
                                 return(
                                     <div className="col" key={i}>
@@ -70,7 +63,7 @@ const Cursos = () =>
                 <div className="container" id="cursos">
                     <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3">
                         { cursos.map((curso,i) =>{
-                            if(!curso.archivado)
+                            if(curso.archivado)
                             {
                                 return(
                                     <div className="col" key={i}>
@@ -85,6 +78,6 @@ const Cursos = () =>
             </div>
         )
     }
-    
 }
-export default Cursos;
+
+export default Cursos_Archivados;

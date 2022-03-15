@@ -65,3 +65,9 @@ h3
 {
     border-color: #5c636a;
 }
+
+#btn-asis
+{
+    height: 40px;
+    font-size: 14px;
+}
