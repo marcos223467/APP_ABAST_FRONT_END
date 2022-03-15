@@ -211,31 +211,33 @@ const Alumno = ({id,alumnoData, actualizar}) =>
     {
         return(
             <div className="container">
-            <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3">
-                <div className="card" id="alumno">
-                    <div className="card-body">
-                        <div className="row">
-                            <h3 className="card-title">{alumnoData.apellidos} {alumnoData.nombre}</h3>
+                <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3">
+                    <div className="card" id="alumno">
+                        <div className="card-body">
+                            <div className="row">
+                                <h3 className="card-title">{alumnoData.apellidos} {alumnoData.nombre}</h3>
+                            </div>
+                            <div className="row">
+                                <p id="txt" className="card-text">Edad: {alumnoData.edad}</p>
+                            </div>
+                            <div className="row">
+                                <p id = "txt" className="card-text">Fecha de nacimiento: {fecha.getDate() + "-" + (fecha.getMonth() + 1) + "-" + fecha.getFullYear()}</p>
+                            </div>
                         </div>
                         <div className="row">
-                            <p id="txt" className="card-text">Edad: {alumnoData.edad}</p>
-                        </div>
-                        <div className="row">
-                            <p id = "txt" className="card-text">Fecha de nacimiento: {fecha.getDate() + "-" + (fecha.getMonth() + 1) + "-" + fecha.getFullYear()}</p>
-                        </div>
-                    </div>
-                    <div className="row">
-                        <div className="container-fluid" id="container-alumno">
-                            <div className="row row-cols-2 row-cols-sm-2 row-cols-md-2 row-cols-lg-2">
-                                <div className="col-lg-6 col-md-6 col-sm-6 col-6">
-                                    <button id={id} className="btn btn-secondary btn-asis" onClick={CambiaEstado}>Pendiente</button>
-                                </div>
-                                <div className="col-lg-2 col-md-2 col-sm-2 col-2">
-                                    <Spinner id={"spinner"+id} className="spinner" color="secondary" />
-                                </div>
-                                <div className="row">
-                                    <div className="col">
-                                        <button id="asist" type="button" className="btn btn-primary" onClick={VerAsistencia}>Asistencia</button>
+                            <div className="container-fluid" id="container-alumno">
+                                <div className="row row-cols-2 row-cols-sm-2 row-cols-md-2 row-cols-lg-2">
+                                    <div className="col-lg-6 col-md-6 col-sm-6 col-6">
+                                        <button id={id} className="btn btn-secondary btn-asis" onClick={CambiaEstado}>Pendiente</button>
+                                    </div>
+                                    <div className="col-lg-2 col-md-2 col-sm-2 col-2">
+                                        <Spinner id={"spinner"+id} className="spinner" color="secondary" />
+                                    </div>
+                                    
+                                    <div className="row">
+                                        <div className="col">
+                                            <button id="asist" type="button" className="btn btn-primary" onClick={VerAsistencia}>Asistencia</button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -243,7 +245,6 @@ const Alumno = ({id,alumnoData, actualizar}) =>
                     </div>
                 </div>
             </div>
-        </div>
         )
     }
     
