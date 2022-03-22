@@ -75,18 +75,18 @@ const AlumnoForm = () =>
                     <legend className="mb-4">Alta Alumno</legend>
                     <div className="mb-3">
                         <small className="">Nombre</small>
-                        <input type="text" id="disabledTextInput" className="form-control" ref={nombre} onChange={changeState}/>
+                        <input type="text" id="disabledTextInput" className="form-control" ref={nombre} onChange={changeState} required/>
                     </div>
                     <div className="mb-3">
                         <small className="">Apellidos</small>
-                        <input type="text" id="disabledTextInput" className="form-control" ref={apellidos} onChange={changeState}/>
+                        <input type="text" id="disabledTextInput" className="form-control" ref={apellidos} onChange={changeState} required/>
                     </div>
                     <div className="mb-3">
                         <small className="">Fecha de nacimiento</small>
-                        <input type="date" id="disabledTextInput" className="form-control" ref={fecha_nacimiento} onChange={changeState}/>
+                        <input type="date" id="disabledTextInput" className="form-control" ref={fecha_nacimiento} onChange={changeState} required/>
                     </div>
                     <div className="mb-3">
-                        <select id="disabledSelect" className="form-select" ref={curso} onChange={changeState}>
+                        <select id="disabledSelect" className="form-select" ref={curso} onChange={changeState} required>
                             <option disable selected>Selecciona un Curso</option>
                             {cursos.map((curs,i) =>{
                                 return(

@@ -53,22 +53,22 @@ const UserForm = () =>
                     <legend className="mb-4">Alta Usuario</legend>
                     <div className="mb-3">
                         <small className="">Email</small>
-                        <input type="email" id="disabledTextInput" className="form-control" ref={email} placeholder="email@example.com" onChange={changeState}/>
+                        <input type="email" id="disabledTextInput" className="form-control" ref={email} placeholder="email@example.com" onChange={changeState} required/>
                     </div>
                     <div className="mb-3">
                         <small className="">Contraseña</small>
-                        <input type="password" id="disabledTextInput" className="form-control" ref={password} onChange={changeState}/>
+                        <input type="password" id="disabledTextInput" className="form-control" ref={password} onChange={changeState} required/>
                     </div>
                     <div className="mb-3">
                         <small className="">Nombre</small>
-                        <input type="text" id="disabledTextInput" className="form-control" ref={nombre} onChange={changeState}/>
+                        <input type="text" id="disabledTextInput" className="form-control" ref={nombre} onChange={changeState} required/>
                     </div>
                     <div className="mb-3">
                         <small className="">Apellidos</small>
-                        <input type="text" id="disabledTextInput" className="form-control" ref={apellidos} onChange={changeState}/>
+                        <input type="text" id="disabledTextInput" className="form-control" ref={apellidos} onChange={changeState} required/>
                     </div>
                     <div className="mb-3">
-                        <select id="disabledSelect" className="form-select" ref={tipo} onChange={changeState}>
+                        <select id="disabledSelect" className="form-select" ref={tipo} onChange={changeState} required>
                             <option disable selected>Selecciona un rol</option>
                             <option value="admin">Administrador</option>
                             <option value="profesor">Profesor</option>
