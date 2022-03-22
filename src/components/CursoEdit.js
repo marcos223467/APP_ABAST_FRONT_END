@@ -71,7 +71,7 @@ const CursoEdit = () =>
             {
                 console.log(error);
             });
-        window.location.href ='/cursos';
+        window.history.back();
     }
     return(
         <div className="bd-example">
