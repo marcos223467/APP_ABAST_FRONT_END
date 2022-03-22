@@ -45,7 +45,7 @@ const CursoEdit = () =>
     function Volver(event)
     {
         event.preventDefault();
-        window.location.href ='/cursos';
+        window.history.back();
     }
 
     const changeState = () =>{
